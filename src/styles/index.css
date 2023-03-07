@@ -1,0 +1,62 @@
+/* ---------- */
+/* Reset      */
+/* ---------- */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* Body Setup */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Easy Images */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Easy Forms */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Prefers-Reduced-Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0, 01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0, 01s !important;
+    scroll-behavior: auto !important;
+  }
+}
