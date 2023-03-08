@@ -115,6 +115,11 @@ select {
   gap: var(--gap, 1rem);
 }
 
+/* use where to keep specificity lower */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -228,4 +233,37 @@ select {
   margin-right: 0.5em;
   font-weight: 700;
   color: hsl(var(--clr-light) / 0.25);
+}
+
+/* ---------- */
+/* Components */
+/* ---------- */
+
+.large-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.large-button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: hsl(var(--clr-white) / 0.15);
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 150ms linear, transform 250ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  transform: scale(1.5);
 }
