@@ -157,7 +157,7 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
 
-        <div style="margin-bottom: 50vh">
+        <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
           <!-- Tabs -->
           <div class="tab-list underline-indicators flex">
             <button
@@ -181,6 +181,17 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Dots -->
+          <div class="dot-indicators flex">
+            <button aria-selected="true" class="">
+              <span class="sr-only">Tab Title</span>
+            </button>
+            <button aria-selected="false" class="">
+              <span class="sr-only">Tab Title</span>
+            </button>
+            <button aria-selected="false" class="">
+              <span class="sr-only">Tab Title</span>
+            </button>
+          </div>
 
           <!-- Numbers -->
         </div>
